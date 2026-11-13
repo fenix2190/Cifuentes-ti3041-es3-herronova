@@ -1,0 +1,21 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Crear cuenta | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Nueva cuenta</p>
+    <section class="form-panel">
+        <h1>Crear usuario</h1>
+        <p class="intro">Regístrate para guardar tu acceso al catálogo.</p>
+        <form method="post" class="account-form">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {{ field.errors }}
+            {% endfor %}
+            <button class="button" type="submit">Registrarme</button>
+        </form>
+    </section>
+{% endblock %}

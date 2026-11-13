@@ -1,0 +1,85 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Inicio | Herranova{% endblock %}
+
+{% block content %}
+    <section class="home-hero">
+        <div class="home-hero-copy">
+            <p class="eyebrow">Bienvenido a Herranova</p>
+            <h1>Todo lo que tu próximo proyecto necesita.</h1>
+            <p class="intro">
+                Somos una ferretería pensada para quienes construyen, reparan y crean.
+                En Herranova encuentras herramientas, materiales y artículos de seguridad
+                para hacer realidad tus ideas, desde los arreglos cotidianos hasta nuevos proyectos.
+            </p>
+            <div class="hero-actions">
+                <a class="button" href="{% url 'lista_productos' %}">Explorar catálogo</a>
+                <a class="button button--secondary" href="{% url 'contacto' %}">Hablemos de tu proyecto</a>
+            </div>
+        </div>
+        <div class="home-hero-art" aria-hidden="true">
+            <div class="home-orbit"><span class="home-orbit-mark">🔧</span></div>
+        </div>
+    </section>
+
+    <section class="home-section" aria-labelledby="sobre-herranova">
+        <div class="home-section-heading">
+            <div>
+                <p class="eyebrow">Nuestra propuesta</p>
+                <h2 id="sobre-herranova">Una buena idea merece buenas herramientas</h2>
+            </div>
+            <span class="stock-status">{{ total_productos }} productos para descubrir</span>
+        </div>
+        <div class="home-about">
+            <article class="home-value">
+                <span class="home-value-icon" aria-hidden="true">✦</span>
+                <h3>Variedad para cada tarea</h3>
+                <p>Reúne en un solo lugar herramientas, fijaciones, materiales eléctricos, pinturas y más.</p>
+            </article>
+            <article class="home-value">
+                <span class="home-value-icon" aria-hidden="true">✓</span>
+                <h3>Compra con información clara</h3>
+                <p>Revisa detalles, precios y disponibilidad antes de agregar tus productos al carrito.</p>
+            </article>
+            <article class="home-value">
+                <span class="home-value-icon" aria-hidden="true">↗</span>
+                <h3>Un espacio para tus proyectos</h3>
+                <p>Ya sea que repares algo en casa o empieces una nueva construcción, aquí puedes comenzar.</p>
+            </article>
+        </div>
+    </section>
+
+    {% if productos_destacados %}
+        <section class="home-section" aria-labelledby="productos-destacados">
+            <div class="home-section-heading">
+                <div>
+                    <p class="eyebrow">Para empezar</p>
+                    <h2 id="productos-destacados">Productos destacados</h2>
+                </div>
+                <a class="button button--secondary" href="{% url 'lista_productos' %}">Ver todo el catálogo</a>
+            </div>
+            <div class="home-product-grid">
+                {% for producto in productos_destacados %}
+                    <article class="home-product-card">
+                        {% if producto.imagen_url %}
+                            <img class="product-image" src="{{ producto.imagen_url }}" alt="{{ producto.nombre }}" loading="lazy">
+                        {% else %}
+                            <div class="product-image product-image--empty" aria-label="Imagen no disponible">Sin imagen</div>
+                        {% endif %}
+                        <span class="category">{{ producto.categoria }}</span>
+                        <h3>{{ producto.nombre }}</h3>
+                        <div class="product-price">{{ producto.precio_formateado }} CLP</div>
+                        <a class="button" href="{% url 'detalle_producto' producto.id %}">Ver producto</a>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    <section class="home-section home-about-cta">
+        <p class="eyebrow">¿Tienes una consulta?</p>
+        <h2>Cuéntanos qué necesitas para tu proyecto.</h2>
+        <p>Escríbenos y envíanos tu consulta a través de nuestro formulario de contacto.</p>
+        <a class="button" href="{% url 'contacto' %}">Contactar a Herranova</a>
+    </section>
+{% endblock %}

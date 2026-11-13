@@ -1,0 +1,40 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Administrar stock | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Panel privado</p>
+    <h1>Administrar stock</h1>
+    <p class="intro">Suma o resta unidades de cada producto. Las modificaciones quedan guardadas en la base de datos.</p>
+
+    <section class="stock-table-wrap" aria-label="Productos y stock">
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Stock actual</th>
+                    <th>Modificar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                    <tr>
+                        <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.categoria }}</td>
+                        <td><strong>{{ producto.stock }}</strong></td>
+                        <td>
+                            <form method="post" class="stock-form">
+                                {% csrf_token %}
+                                <input type="hidden" name="producto_id" value="{{ producto.id }}">
+                                <input type="number" name="cantidad" min="1" value="1" aria-label="Cantidad para {{ producto.nombre }}">
+                                <button class="button button--small" type="submit" name="operacion" value="sumar">+ Sumar</button>
+                                <button class="button button--small button--secondary" type="submit" name="operacion" value="restar">- Restar</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

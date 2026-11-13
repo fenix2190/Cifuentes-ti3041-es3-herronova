@@ -1,0 +1,71 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Carrito | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Tu selección</p>
+    <h1>Carrito de compras</h1>
+    {% if items_carrito %}
+        <section class="stock-table-wrap">
+            <table class="stock-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items_carrito %}
+                        <tr>
+                            <td>
+                                <a href="{% url 'detalle_producto' item.producto.id %}">{{ item.producto.nombre }}</a>
+                            </td>
+                            <td>{{ item.producto.precio_formateado }}</td>
+                            <td>
+                                <form method="post" action="{% url 'actualizar_carrito' item.producto.id %}" class="stock-form">
+                                    {% csrf_token %}
+                                    <input type="number" name="cantidad" value="{{ item.cantidad }}" min="0" max="{{ item.producto.stock }}" aria-label="Cantidad de {{ item.producto.nombre }}">
+                                    <button class="button button--small" type="submit">Actualizar</button>
+                                </form>
+                            </td>
+                            <td>{{ item.subtotal_formateado }}</td>
+                            <td>
+                                <form method="post" action="{% url 'eliminar_del_carrito' item.producto.id %}">
+                                    {% csrf_token %}
+                                    <button class="button button--small button--secondary" type="submit">Quitar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section class="form-panel" style="margin-top: 24px;">
+            <h2>Resumen</h2>
+            <p>Subtotal: <strong>{{ subtotal_neto_formateado }}</strong></p>
+            <p>IVA (19%): <strong>{{ total_iva_formateado }}</strong></p>
+            <p>Total: <strong>{{ total_general_formateado }} CLP</strong></p>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'compra' %}">
+                    {% csrf_token %}
+                    <button class="button button--buy" type="submit">Confirmar compra</button>
+                </form>
+            {% else %}
+                <a class="button" href="{% url 'iniciar_sesion' %}?next={% url 'carrito' %}">Inicia sesión para comprar</a>
+            {% endif %}
+            <form method="post" action="{% url 'vaciar_carrito' %}" style="margin-top: 12px;">
+                {% csrf_token %}
+                <button class="button button--secondary" type="submit">Vaciar carrito</button>
+            </form>
+        </section>
+    {% else %}
+        <section class="form-panel">
+            <p class="intro">Tu carrito está vacío.</p>
+            <a class="button" href="{% url 'lista_productos' %}">Ir al catálogo</a>
+        </section>
+    {% endif %}
+{% endblock %}

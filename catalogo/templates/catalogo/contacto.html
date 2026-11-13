@@ -1,0 +1,22 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Contacto | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Estamos para ayudarte</p>
+    <section class="form-panel">
+        <h1>Contacto y cotizaciones</h1>
+        <p class="intro">Déjanos tu mensaje y te responderemos a la brevedad.</p>
+        <p class="stock-status">Has visitado esta sección {{ visitas_contacto }} vez/veces.</p>
+        <form method="post" class="account-form">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% for field in form %}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {{ field.errors }}
+            {% endfor %}
+            <button class="button" type="submit">Enviar mensaje</button>
+        </form>
+    </section>
+{% endblock %}

@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "nombre": "Martillo de uña",
+    "descripcion": "Martillo resistente para clavar y retirar clavos en trabajos de carpinteria.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 8990,
+    "moneda": "CLP",
+    "imagen_url": "https://olateferreteria.cl/wp-content/uploads/2025/01/Martillo-Carpintero-Una-Curva-16oz-TRUPER.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Destornillador de cruz mediano",
+    "descripcion": "Destornillador Phillips de tamaño mediano para apretar y soltar tornillos.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 2990,
+    "moneda": "CLP",
+    "imagen_url": "https://trongemen.cl/wp-content/uploads/main-7.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Destornillador plano mediano",
+    "descripcion": "Destornillador de punta plana para tareas de reparacion y montaje.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 2990,
+    "moneda": "CLP",
+    "imagen_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfdf5TzJjmnTdf9XmSW3SCjmHo-Ak_4ZI-kLJrkTFxuNKCEmBnFKEBbw&s=10"
+  },
+  {
+    "id": 4,
+    "nombre": "Alicate universal 8 pulgadas",
+    "descripcion": "Alicate versatil para sujetar, doblar y cortar distintos materiales.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 6990,
+    "moneda": "CLP",
+    "imagen_url": "https://cdnx.jumpseller.com/ferroelectronic/image/19955137/alicate_universal___.png?1697570961"
+  },
+  {
+    "id": 5,
+    "nombre": "Alicate de punta 6 pulgadas",
+    "descripcion": "Alicate de punta fina para trabajos de precision y acceso a espacios reducidos.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 5990,
+    "moneda": "CLP",
+    "imagen_url": "https://media.falabella.com/falabellaCL/114119165_01/w=1500,h=1500,fit=cover"
+  },
+  {
+    "id": 6,
+    "nombre": "Cinta metrica 5 metros",
+    "descripcion": "Cinta metrica retráctil de 5 metros para mediciones rapidas y precisas.",
+    "categoria": "Medicion",
+    "precio_clp": 4990,
+    "moneda": "CLP",
+    "imagen_url": "https://cdnx.jumpseller.com/ferroelectronic/image/18124508/D_NQ_NP_2X_839342-MLC46996741775_082021-F.webp?1697570959"
+  },
+  {
+    "id": 7,
+    "nombre": "Nivel de burbuja 40 cm",
+    "descripcion": "Nivel compacto de 40 cm para comprobar superficies horizontales y verticales.",
+    "categoria": "Medicion",
+    "precio_clp": 6990,
+    "moneda": "CLP",
+    "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_604624-MLA92968868918_092025-O.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Llave ajustable 10 pulgadas",
+    "descripcion": "Llave ajustable para apretar y aflojar tuercas de diferentes medidas.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 7990,
+    "moneda": "CLP",
+    "imagen_url": "https://herramientastotal.cl/cdn/shop/files/THT101106_2_700x700.jpg?v=1732713655"
+  },
+  {
+    "id": 9,
+    "nombre": "Juego de llaves Allen",
+    "descripcion": "Set de llaves hexagonales para ensamblar muebles, bicicletas y maquinaria.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 3990,
+    "moneda": "CLP",
+    "imagen_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWuUsaO9-LngW8z5_5GnEYLuYHSbO2zU3ZcCnitoS79MplfD6ixcfo7_V3&s=10"
+  },
+  {
+    "id": 10,
+    "nombre": "Serrucho carpintero 20 pulgadas",
+    "descripcion": "Serrucho de 20 pulgadas para cortes manuales en madera.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 8990,
+    "moneda": "CLP",
+    "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_909588-MLC109477245783_032026-O-serrucho-carpintero-20-pulgadas-total-tools.webp"
+  },
+  {
+    "id": 11,
+    "nombre": "Cuchillo cartonero",
+    "descripcion": "Cuchillo con hoja retráctil para cortar carton, embalajes y materiales livianos.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 1990,
+    "moneda": "CLP",
+    "imagen_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFXy53IsDegQecuh6KIL-4N4J20lhIEFDN4IBuhJve69SUVvOF3mfZvJB&s=10"
+  },
+  {
+    "id": 12,
+    "nombre": "Tijera corta lata",
+    "descripcion": "Tijera reforzada para realizar cortes controlados en laminas metalicas.",
+    "categoria": "Herramientas manuales",
+    "precio_clp": 6990,
+    "moneda": "CLP",
+    "imagen_url": "https://trongemen.cl/wp-content/uploads/THT524101-1.jpg"
+  },
+  {
+    "id": 13,
+    "nombre": "Taladro electrico 500 W",
+    "descripcion": "Taladro electrico de 500 W para perforar madera, metal y mamposteria.",
+    "categoria": "Herramientas electricas",
+    "precio_clp": 34990,
+    "moneda": "CLP",
+    "imagen_url": "https://cdnx.jumpseller.com/ferroelectronic/image/17604790/resize/480/533?1697570962"
+  },
+  {
+    "id": 14,
+    "nombre": "Broca para concreto 8mm",
+    "descripcion": "Broca de 8 mm diseñada para perforar concreto y superficies de mamposteria.",
+    "categoria": "Accesorios",
+    "precio_clp": 1990,
+    "moneda": "CLP",
+    "imagen_url": "https://isesacl.vtexassets.com/arquivos/ids/158268/broca_hormigon_armado_f8_extreme_alpen_1.jpg?v=637196398854700000"
+  },
+  {
+    "id": 15,
+    "nombre": "Broca para metal 6mm",
+    "descripcion": "Broca de 6 mm para realizar perforaciones limpias en piezas metalicas.",
+    "categoria": "Accesorios",
+    "precio_clp": 1490,
+    "moneda": "CLP",
+    "imagen_url": "https://www.construmart.cl/media/catalog/product/b/r/broca-hss-para-metal-6-mm-2-un-15579-1_0shfzgup6tnyipm3.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
+  },
+  {
+    "id": 16,
+    "nombre": "Disco de corte para metal",
+    "descripcion": "Disco abrasivo para cortar perfiles, tubos y piezas de metal.",
+    "categoria": "Accesorios",
+    "precio_clp": 2490,
+    "moneda": "CLP",
+    "imagen_url": "https://herramientastotal.cl/cdn/shop/products/total-tools-accesorios-para-sierras-disco-de-corte-para-metal-4-1-2-115x1-2x22-2mm-total-31997300572330_1024x1024.jpg?v=1665468161"
+  },
+  {
+    "id": 17,
+    "nombre": "Lija para madera grano 120",
+    "descripcion": "Lija de grano 120 para suavizar y preparar superficies de madera.",
+    "categoria": "Abrasivos",
+    "precio_clp": 990,
+    "moneda": "CLP",
+    "imagen_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREsMkIcn5OxOTI4ZyZ5GKHKLIRG4kJSA8k3DFkHyUapQ&s"
+  },
+  {
+    "id": 18,
+    "nombre": "Caja de tornillos para madera",
+    "descripcion": "Tornillos practicos para unir y fijar piezas de madera en distintos proyectos.",
+    "categoria": "Fijaciones",
+    "precio_clp": 4990,
+    "moneda": "CLP",
+    "imagen_url": "https://www.chileremates.cl/imagenes/galeria/img_5d28d94a0110c0_01946689.jpg"
+  },
+  {
+    "id": 19,
+    "nombre": "Caja de tornillos autoperforantes",
+    "descripcion": "Tornillos autoperforantes para fijaciones rapidas en metal y otros materiales.",
+    "categoria": "Fijaciones",
+    "precio_clp": 5990,
+    "moneda": "CLP",
+    "imagen_url": "https://toolmix.cl/wp-content/uploads/2024/11/D_642345-MLC80598615718_112024-F.jpg"
+  },
+  {
+    "id": 20,
+    "nombre": "Caja de clavos de acero 2 pulgadas",
+    "descripcion": "Clavos de acero de 2 pulgadas para fijaciones firmes en madera.",
+    "categoria": "Fijaciones",
+    "precio_clp": 3990,
+    "moneda": "CLP",
+    "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_680826-MLC92297612560_092025-O.webp"
+  },
+  {
+    "id": 21,
+    "nombre": "Tarugos plasticos 8mm",
+    "descripcion": "Tarugos plasticos de 8 mm para fijar elementos en muros y superficies solidas.",
+    "categoria": "Fijaciones",
+    "precio_clp": 2490,
+    "moneda": "CLP",
+    "imagen_url": "https://media.falabella.com/sodimacCL/131660_001/w=1500,h=1500,fit=cover"
+  },
+  {
+    "id": 22,
+    "nombre": "Pernos con tuerca surtidos",
+    "descripcion": "Set surtido de pernos y tuercas para uniones resistentes y reparaciones.",
+    "categoria": "Fijaciones",
+    "precio_clp": 4990,
+    "moneda": "CLP",
+    "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_667850-CBT111953683986_062026-O-kit-surtido-de-pernos-y-tuercas-kingarcher-de-acero-inoxidab.webp"
+  },
+  {
+    "id": 23,
+    "nombre": "Cola fria para madera 250g",
+    "descripcion": "Adhesivo de 250 g para unir madera y trabajos de carpinteria.",
+    "categoria": "Adhesivos",
+    "precio_clp": 2990,
+    "moneda": "CLP",
+    "imagen_url": "https://isesacl.vtexassets.com/arquivos/ids/168901/CARPINTERA_250GRS_1.jpg?v=638699594608600000"
+  },
+  {
+    "id": 24,
+    "nombre": "Silicona sellante transparente",
+    "descripcion": "Sellante transparente para proteger juntas contra humedad y filtraciones.",
+    "categoria": "Sellantes",
+    "precio_clp": 4490,
+    "moneda": "CLP",
+    "imagen_url": "https://http2.mlstatic.com/D_NQ_NP_984485-MLA99994356713_112025-O.webp"
+  },
+  {
+    "id": 25,
+    "nombre": "Cinta aisladora negra",
+    "descripcion": "Cinta aisladora para proteger, cubrir y organizar conexiones electricas.",
+    "categoria": "Electricidad",
+    "precio_clp": 1290,
+    "moneda": "CLP",
+    "imagen_url": "https://cdnx.jumpseller.com/casaedison/image/65243445/IM_20-_202025-07-09T132715.812.png?1752082114"
+  },
+  {
+    "id": 26,
+    "nombre": "Cinta teflon para tuberias",
+    "descripcion": "Cinta de teflon para sellar roscas y prevenir fugas en tuberias.",
+    "categoria": "Gasfiteria",
+    "precio_clp": 990,
+    "moneda": "CLP",
+    "imagen_url": "https://media.falabella.com/sodimacCL/9006834_01/w=1500,h=1500,fit=cover"
+  },
+  {
+    "id": 27,
+    "nombre": "Llave de paso 1/2 pulgada",
+    "descripcion": "Llave de paso de media pulgada para controlar el flujo de agua.",
+    "categoria": "Gasfiteria",
+    "precio_clp": 4990,
+    "moneda": "CLP",
+    "imagen_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTorov-on12t81uLcg4O4EvYnUSHf3u7fhEafMxML20OPViLeKccd-46jo&s=10"
+  },
+  {
+    "id": 28,
+    "nombre": "Sifon plastico para lavaplatos",
+    "descripcion": "Sifon plastico para conectar desagues de lavaplatos y evitar malos olores.",
+    "categoria": "Gasfiteria",
+    "precio_clp": 6990,
+    "moneda": "CLP",
+    "imagen_url": "https://www.construmart.cl/media/catalog/product/s/i/sifon-loa-1-12-1-14-estandar-recto-71197-1_v1ongovkgypkuhqm.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
+  },
+  {
+    "id": 29,
+    "nombre": "Manguera de jardin 15 metros",
+    "descripcion": "Manguera de 15 metros para riego y limpieza en patios y jardines.",
+    "categoria": "Jardin",
+    "precio_clp": 12990,
+    "moneda": "CLP",
+    "imagen_url": "https://www.miferreteria.cl/wp-content/uploads/2018/11/Manguera-riego-reforzada-15-metros-truper-MAN-15.jpg"
+  },
+  {
+    "id": 30,
+    "nombre": "Pistola para riego",
+    "descripcion": "Pistola de riego con formato comodo para controlar el agua al regar.",
+    "categoria": "Jardin",
+    "precio_clp": 5990,
+    "moneda": "CLP",
+    "imagen_url": "https://herramientastotal.cl/cdn/shop/files/THWS010301_700x700.jpg?v=1734352255"
+  },
+  {
+    "id": 31,
+    "nombre": "Pala punta metalica",
+    "descripcion": "Pala de punta metalica para excavar, remover tierra y realizar trabajos de jardin.",
+    "categoria": "Jardin",
+    "precio_clp": 9990,
+    "moneda": "CLP",
+    "imagen_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj6ysxeQq6mSmsxjJWN_Hh2VNlQzPc2D_MBqK3EOz17iyQ7_LjuZErDjk&s=10"
+  },
+  {
+    "id": 32,
+    "nombre": "Guantes de trabajo",
+    "descripcion": "Guantes protectores para manipular herramientas y materiales con mayor seguridad.",
+    "categoria": "Seguridad",
+    "precio_clp": 2490,
+    "moneda": "CLP",
+    "imagen_url": "https://herramientastotal.cl/cdn/shop/products/total-tools-guantes-de-seguridad-par-de-guantes-pigmentados-talla-xl-total-31997312794794_700x700.jpg?v=1665468048"
+  },
+  {
+    "id": 33,
+    "nombre": "Lentes de seguridad transparentes",
+    "descripcion": "Lentes transparentes para proteger los ojos contra polvo y particulas.",
+    "categoria": "Seguridad",
+    "precio_clp": 2990,
+    "moneda": "CLP",
+    "imagen_url": "https://cdnx.jumpseller.com/ferroelectronic/image/32775503/thumb/960/960?1697570984"
+  },
+  {
+    "id": 34,
+    "nombre": "Mascarilla antipolvo",
+    "descripcion": "Mascarilla liviana para reducir la inhalacion de polvo durante trabajos manuales.",
+    "categoria": "Seguridad",
+    "precio_clp": 1490,
+    "moneda": "CLP",
+    "imagen_url": "https://media.falabella.com/falabellaCL/137940682_01/w=1500,h=1500,fit=cover"
+  },
+  {
+    "id": 35,
+    "nombre": "Chaleco reflectante",
+    "descripcion": "Chaleco de alta visibilidad para trabajar con mayor seguridad en exteriores.",
+    "categoria": "Seguridad",
+    "precio_clp": 4990,
+    "moneda": "CLP",
+    "imagen_url": "https://maryun.cl/cdn/shop/files/Diseno_sin_titulo_13_af44028c-daf2-424b-a7ff-bf044559cb89.png?v=1748800458&width=1400"
+  },
+  {
+    "id": 36,
+    "nombre": "Ampolleta LED 9W",
+    "descripcion": "Ampolleta LED de 9 W para iluminar espacios con bajo consumo energetico.",
+    "categoria": "Electricidad",
+    "precio_clp": 2490,
+    "moneda": "CLP",
+    "imagen_url": "https://www.construmart.cl/media/catalog/product/a/m/ampolleta-led-e27-9-w-luz-fria-246869-1_grypn72vwcvccjg6.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
+  },
+  {
+    "id": 37,
+    "nombre": "Enchufe hembra triple blanco",
+    "descripcion": "Enchufe hembra triple para conectar varios dispositivos electricos.",
+    "categoria": "Electricidad",
+    "precio_clp": 1990,
+    "moneda": "CLP",
+    "imagen_url": "https://easycl.vteximg.com.br/arquivos/ids/4815564/890571-0000-001.jpg?v=638733501863570000"
+  },
+  {
+    "id": 38,
+    "nombre": "Interruptor simple 9/12 10A",
+    "descripcion": "Interruptor simple de 10 A para controlar circuitos de iluminacion.",
+    "categoria": "Electricidad",
+    "precio_clp": 2490,
+    "moneda": "CLP",
+    "imagen_url": "https://dojiw2m9tvv09.cloudfront.net/11907/product/interruptorsimpleembutido_v20588.png"
+  },
+  {
+    "id": 39,
+    "nombre": "Extensor electrico 5 metros",
+    "descripcion": "Extensor electrico de 5 metros para ampliar el alcance de tus conexiones.",
+    "categoria": "Electricidad",
+    "precio_clp": 7990,
+    "moneda": "CLP",
+    "imagen_url": "https://media.falabella.com/sodimacCL/7382898_12/w=1500,h=1500,fit=cover"
+  },
+  {
+  "id": 40,
+  "nombre": "Candado Odis 360 60mm",
+  "descripcion": "Candado laminado de 60 mm para proteger puertas, bodegas y casilleros.",
+  "categoria": "Seguridad",
+  "precio_clp": 5990,
+  "moneda": "CLP",
+  "imagen_url": "https://odis.cl/cdn/shop/files/diseno-sin-titulo-19-c264c6eb-f74e-4c77-a44d-944cc7c9df2e.jpg?v=1760040500&width=1445"
+}
+]

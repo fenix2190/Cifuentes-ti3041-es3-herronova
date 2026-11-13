@@ -1,0 +1,111 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Catálogo | Herranova{% endblock %}
+
+{% block content %}
+    <section class="catalog-hero">
+        <p class="eyebrow">Surtido para cada proyecto</p>
+        <h1>Catálogo de productos</h1>
+        <p class="intro">Encuentra herramientas, fijaciones y materiales confiables para reparar, construir y mantener.</p>
+        {% if user.is_staff %}
+            <div class="hero-actions">
+                <a class="button" href="{% url 'producto_crear' %}">Agregar producto</a>
+                <a class="button button--secondary" href="{% url 'reporte_stock' %}">Ver stock crítico</a>
+            </div>
+        {% endif %}
+    </section>
+
+    <section class="summary" aria-label="Resumen del inventario">
+        <div class="summary-item">
+            <span class="summary-value">{{ resumen.total }}</span>
+            <span class="summary-label">Registros totales</span>
+        </div>
+        <div class="summary-item">
+            <span class="summary-value">{{ resumen.disponibles }}</span>
+            <span class="summary-label">Con stock disponible</span>
+        </div>
+        <div class="summary-item">
+            <span class="summary-value">{{ resumen.sin_stock }}</span>
+            <span class="summary-label">Sin disponibilidad</span>
+        </div>
+    </section>
+
+    <div class="catalog-filters" aria-label="Filtrar productos">
+        <input id="buscador-productos" type="search" placeholder="Buscar productos..." aria-label="Buscar productos">
+        <select id="filtro-categoria" aria-label="Filtrar por categoría">
+            <option value="">Todas las categorías</option>
+            {% for categoria in categorias %}
+                <option value="{{ categoria|lower }}">{{ categoria }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <section class="product-grid" aria-label="Listado de productos">
+        {% for producto in productos %}
+            <article class="product-card tarjeta-producto{% if not producto.disponible %} product-card--unavailable{% endif %}"
+                     data-nombre="{{ producto.nombre|lower }}"
+                     data-categoria="{{ producto.categoria|lower }}">
+                {% if producto.imagen_url %}
+                    <img class="product-image" src="{{ producto.imagen_url }}" alt="{{ producto.nombre }}" loading="lazy">
+                {% else %}
+                    <div class="product-image product-image--empty" aria-label="Imagen no disponible">Sin imagen</div>
+                {% endif %}
+                <div class="category">{{ producto.categoria }}</div>
+                {% if producto.disponible %}
+                    <div class="stock-status">Disponible · {{ producto.stock }} unidades</div>
+                {% else %}
+                    <div class="stock-status stock-status--unavailable">Sin stock</div>
+                {% endif %}
+                <h2>{{ producto.nombre }}</h2>
+                <p class="product-description">{{ producto.descripcion }}</p>
+                <div class="product-price">{{ producto.precio_formateado }} CLP</div>
+                <a class="button" href="{% url 'detalle_producto' producto.id %}">Ver detalle</a>
+                {% if producto.disponible %}
+                    <form method="post" action="{% url 'agregar_al_carrito' producto.id %}" class="account-form">
+                        {% csrf_token %}
+                        <label for="cantidad-{{ producto.id }}">Cantidad</label>
+                        <input id="cantidad-{{ producto.id }}" type="number" name="cantidad" value="1" min="1" max="{{ producto.stock }}">
+                        <button class="button button--buy" type="submit">Añadir al carrito</button>
+                    </form>
+                {% endif %}
+                {% if producto.disponible and user.is_authenticated %}
+                    <form method="post" action="{% url 'comprar_producto' producto.id %}">
+                        {% csrf_token %}
+                        <button class="button button--buy" type="submit">Comprar 1 unidad</button>
+                    </form>
+                {% endif %}
+                {% if user.is_staff %}
+                    <div class="stock-form">
+                        <a class="button button--small" href="{% url 'producto_editar' producto.id %}">Editar</a>
+                        <a class="button button--small button--secondary" href="{% url 'producto_eliminar' producto.id %}">Eliminar</a>
+                    </div>
+                {% endif %}
+            </article>
+        {% empty %}
+            <p>No hay productos disponibles en este momento.</p>
+        {% endfor %}
+    </section>
+    <p id="sin-resultados" class="intro" hidden>No se encontraron productos coincidentes.</p>
+    <script>
+        const buscador = document.getElementById('buscador-productos');
+        const filtroCategoria = document.getElementById('filtro-categoria');
+        const tarjetas = document.querySelectorAll('.tarjeta-producto');
+        const sinResultados = document.getElementById('sin-resultados');
+
+        function filtrarProductos() {
+            const texto = buscador.value.trim().toLocaleLowerCase();
+            const categoria = filtroCategoria.value;
+            let visibles = 0;
+            tarjetas.forEach((tarjeta) => {
+                const coincide = tarjeta.dataset.nombre.includes(texto)
+                    && (!categoria || tarjeta.dataset.categoria === categoria);
+                tarjeta.hidden = !coincide;
+                if (coincide) visibles += 1;
+            });
+            sinResultados.hidden = visibles > 0;
+        }
+
+        buscador.addEventListener('input', filtrarProductos);
+        filtroCategoria.addEventListener('change', filtrarProductos);
+    </script>
+{% endblock %}

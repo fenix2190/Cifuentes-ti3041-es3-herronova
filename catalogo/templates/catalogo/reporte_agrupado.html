@@ -1,0 +1,32 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Reporte por categoría | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Panel privado</p>
+    <h1>Resumen por categoría</h1>
+    <section class="stock-table-wrap">
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>Categoría</th>
+                    <th>Productos</th>
+                    <th>Stock total</th>
+                    <th>Precio promedio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fila in reportes %}
+                    <tr>
+                        <td>{{ fila.categoria }}</td>
+                        <td>{{ fila.cantidad_productos }}</td>
+                        <td>{{ fila.total_stock }}</td>
+                        <td>${{ fila.precio_promedio|floatformat:0 }} CLP</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="4">No hay productos registrados.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

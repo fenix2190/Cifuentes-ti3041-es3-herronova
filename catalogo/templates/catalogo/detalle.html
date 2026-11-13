@@ -1,0 +1,37 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}{{ producto.nombre }} | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Detalle del producto</p>
+    <section class="detail-panel">
+        {% if producto.imagen_url %}
+            <img class="detail-image" src="{{ producto.imagen_url }}" alt="{{ producto.nombre }}">
+        {% else %}
+            <div class="detail-image detail-image--empty" aria-label="Imagen no disponible">Sin imagen</div>
+        {% endif %}
+        <div class="category">{{ producto.categoria }}</div>
+        <h1>{{ producto.nombre }}</h1>
+        <p class="detail-description">{{ producto.descripcion }}</p>
+        <div class="product-price">{{ producto.precio_formateado }} CLP</div>
+        {% if producto.disponible %}
+            <form method="post" action="{% url 'agregar_al_carrito' producto.id %}" class="account-form">
+                {% csrf_token %}
+                <label for="cantidad-producto">Cantidad (máximo {{ producto.stock }})</label>
+                <input id="cantidad-producto" type="number" name="cantidad" value="1" min="1" max="{{ producto.stock }}">
+                <button class="button" type="submit">Añadir al carrito</button>
+            </form>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'comprar_producto' producto.id %}">
+                    {% csrf_token %}
+                    <button class="button button--buy" type="submit">Comprar 1 unidad directamente</button>
+                </form>
+            {% else %}
+                <p class="stock-status">Inicia sesión para comprar directamente; también puedes pagar desde el carrito.</p>
+            {% endif %}
+        {% else %}
+            <p class="stock-status stock-status--unavailable">Sin stock</p>
+        {% endif %}
+        <a class="button button--secondary detail-back" href="{% url 'lista_productos' %}">Volver al catálogo</a>
+    </section>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Stock crítico | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Panel privado</p>
+    <h1>Stock crítico</h1>
+    <p class="intro">Productos con cinco unidades o menos disponibles.</p>
+    <section class="stock-table-wrap">
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Stock actual</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for producto in productos %}
+                    <tr>
+                        <td>{{ producto.nombre }}</td>
+                        <td>{{ producto.categoria }}</td>
+                        <td>{{ producto.precio_formateado }} CLP</td>
+                        <td>{{ producto.stock }}</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="4">No hay productos con stock crítico.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+{% endblock %}

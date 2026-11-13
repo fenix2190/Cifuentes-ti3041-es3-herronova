@@ -1,0 +1,16 @@
+{% extends 'catalogo/base.html' %}
+
+{% block title %}Eliminar producto | Herranova{% endblock %}
+
+{% block content %}
+    <p class="eyebrow">Panel privado</p>
+    <section class="form-panel">
+        <h1>¿Eliminar producto?</h1>
+        <p>Se eliminará <strong>{{ object.nombre }}</strong> del catálogo.</p>
+        <form method="post" class="account-form">
+            {% csrf_token %}
+            <button class="button button--buy" type="submit">Sí, eliminar</button>
+            <a class="button button--secondary" href="{% url 'lista_productos' %}">Cancelar</a>
+        </form>
+    </section>
+{% endblock %}
